@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscador de Cócteles</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img src="imagenes/rlogo.png" alt="Logo" height="70" class="logo-img">
+                </a>
+                
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#" id="inicioLink">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" id="aleatorioLink">Aleatorio</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container mt-4">
+        <!-- Imagen de presentación del index con el nombre -->
+        <div class="text-center mb-5">
+            <img src="imagenes/inicio.png" alt="Presentación" class="img-presentacion">
+        </div>
+
+        <!-- Apartado para buscar el coctel que queramos -->
+        <div class="row justify-content-center">
+            <div class="col-md-8 col-lg-6">
+                <h1 class="text-center mb-4">Busca tu cóctel</h1>
+                
+                <div class="input-group mb-3">
+                    <input type="text" 
+                           class="form-control" 
+                           id="buscarInput" 
+                           placeholder="Ej: Margarita, Mojito...">
+                    <button class="btn btn-buscar" id="buscarBtn">Buscar</button>
+                    <button class="btn btn-aleatorio" id="randomBtn">Aleatorio</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mensajes -->
+        <div id="mensajes" class="mb-4"></div>
+
+        <!-- Resultados -->
+        <h2 id="tituloResultados" class="text-center mb-4">Cócteles Populares</h2>
+
+        <!-- Contenedor cócteles donde apareceran todos los cocteles que busquemos -->
+        <div class="row" id="contenedorCocktails">
+        </div>
+    </main>
+
+    <!-- Modal -->
+    <div class="modal fade" id="modalDetalles">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Detalles</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body" id="modalCuerpo">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-cerrar" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Proyecto - Bloque II - Antonio Raño - TheCocktailDB API</p>
+    </footer>
+
+    <script src="js/aranoscript.js"></script>
+</body>
+</html>
