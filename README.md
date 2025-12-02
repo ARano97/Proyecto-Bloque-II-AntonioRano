@@ -18,9 +18,8 @@ El objetivo era desarrollar una web responsiva que usara **HTML, CSS, JavaScript
 
 Todos los datos de los cócteles se obtienen de:
 
-$$
-\text{[https://www.thecocktaildb.com/api/json/v1/1/](https://www.thecocktaildb.com/api/json/v1/1/)}
-$$
+https://www.thecocktaildb.com/api/json/v1/1/
+
 
 ## 🚀 Cómo Funciona
 
