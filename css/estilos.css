@@ -32,7 +32,7 @@ header {
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 107, 53, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
-/* Imagen de presentación al entrar en la web */
+/* Imagen de presentación al entrar en la web de Raño Conteles */
 .img-presentacion {
     max-width: 100%;
     height: 280px;
@@ -41,4 +41,226 @@ header {
     border: 2px solid #FF6B35;
     box-shadow: 0 0 25px #FF6B35;
     padding: 10px;
+}
+
+/* Títulos */
+h1, h2, h5 {
+    color: #FF6B35;
+    text-shadow: 2px 2px 4px black;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+/* Input y botones */
+.form-control {
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid #FF6B35;
+    color: white;
+    padding: 12px;
+    font-size: 1.1rem;
+}
+
+.form-control::placeholder { /* Para cambiar el color de las letras del buscador */
+    color: #ffffff8a;
+}
+
+.form-control:focus {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: #FF8E53;
+    color: white;
+    box-shadow: 0 0 15px #FF6B35;
+}
+
+.btn {
+    border: none;
+    font-weight: bold;
+    transition: 0.3s;
+    padding: 12px 25px;
+    font-size: 1.1rem;
+}
+
+.btn-buscar {
+    background: #FF6B35;
+    color: white;
+}
+
+.btn-aleatorio {
+    background: #FF6B35;
+    color: white;
+}
+
+.btn-cerrar {
+    background: #FF6B35;
+    color: white;
+}
+
+.btn:hover {
+    opacity: 0.9;
+    background-color: #ff6b3580;
+    transform: scale(1.05);
+}
+
+/* Cards de los cócteles */
+.cocktail-card {
+    background: rgba(0, 0, 0, 0.8);
+    border: 2px solid #FF6B35;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 25px;
+    transition: 0.3s;
+}
+
+.cocktail-card:hover {
+    border-color: #FF8E53;
+    box-shadow: 0 0 20px #FF6B35;
+    transform: translateY(-5px);
+}
+
+.cocktail-img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.cocktail-body {
+    padding: 20px;
+}
+
+.cocktail-nombre {
+    color: #FF6B35;
+    font-weight: bold;
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+.cocktail-categoria {
+    color: #FF8E53;
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.cocktail-tipo {
+    display: inline-block;
+    background: #FFA07A;
+    color: black;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.btn-detalles {
+    background: #FF6B35;
+    color: white;
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    font-size: 1rem;
+}
+
+.btn-detalles:hover {
+    background: #FF8E53;
+}
+
+/* Modal (vntanas) */
+.modal-content {
+    background: rgba(0, 0, 0, 0.95);
+    border: 3px solid #FF6B35;
+    color: white;
+}
+
+.modal-header {
+    border-bottom: 2px solid #FF6B35;
+}
+
+.modal-title {
+    color: #FF6B35;
+    font-size: 1.5rem;
+}
+
+.modal-footer {
+    border-top: 2px solid #FF6B35;
+}
+
+.btn-close {
+    filter: invert(1);
+}
+
+/* Mensajes de si el coctel es alcohólico o no*/
+.mensaje {
+    padding: 15px;
+    border-radius: 8px;
+    margin: 15px 0;
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+.mensaje-exito {
+    background: rgba(255, 107, 53, 0.3);
+    border: 2px solid #FF6B35;
+    color: #FF6B35;
+}
+
+.mensaje-error {
+    background: rgba(255, 0, 0, 0.3);
+    border: 2px solid red;
+    color: #ff8888;
+}
+
+/* Footer */
+footer {
+    background: rgba(0, 0, 0, 0.9);
+    text-align: center;
+    padding: 25px;
+    margin-top: 60px;
+    border-top: 3px solid #FF6B35;
+    color: #FF6B35;
+    font-size: 1.1rem;
+}
+
+/* Indicaciones para que sea responsive */
+@media (max-width: 768px) {
+    .img-presentacion {
+        height: 200px;
+    }
+    
+    .input-group {
+        flex-direction: column;
+    }
+    
+    .btn {
+        width: 100%;
+        margin-top: 10px;
+    }
+    
+    .navbar-brand img.logo-img {
+        height: 60px;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .img-presentacion {
+        height: 180px;
+    }
+    
+    .navbar-brand img.logo-img {
+        height: 50px;
+    }
 }
